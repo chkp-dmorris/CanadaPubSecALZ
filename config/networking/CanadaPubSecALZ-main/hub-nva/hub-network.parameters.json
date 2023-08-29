@@ -48,13 +48,6 @@
     },
     "subscriptionRoleAssignments": {
       "value": [
-        {
-          "comments": "Built-in Contributor Role",
-          "securityGroupObjectIds": [
-            "12d01649-fdb7-4769-afe5-66248082a064"
-          ],
-          "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"
-        }
       ]
     },
     "subscriptionBudget": {

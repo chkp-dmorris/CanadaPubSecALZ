@@ -184,14 +184,16 @@ var backendPoolInternalInterfaces = [for (virtualMachine, index) in backendPoolV
 }]
 
 resource ILBBackendExt 'Microsoft.Network/loadBalancers/backendAddressPools@2020-11-01' = {
-  name: '${ILB.name}/${ILB.name}-Backend-ext'
+  parent: ILB
+  name: '${ILB.name}-Backend-ext'
   properties: {
     loadBalancerBackendAddresses: configureEmptyBackendPool ? null : backendPoolExternalInterfaces
   }
 }
 
 resource ILBBackendInt 'Microsoft.Network/loadBalancers/backendAddressPools@2020-11-01' = {
-  name: '${ILB.name}/${ILB.name}-Backend-int'
+  parent: ILB
+  name: '${ILB.name}-Backend-int'
   properties: {
     loadBalancerBackendAddresses: configureEmptyBackendPool ? null : backendPoolInternalInterfaces
   }
